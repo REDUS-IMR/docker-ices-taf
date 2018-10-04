@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Build and run the dockerized TAF
-docker build --rm -t stage1-taf .
+docker build --pull --rm -t stage1-taf .
 docker run --name stage2-taf -d stage1-taf
 
 # Copy the result archive
